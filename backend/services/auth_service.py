@@ -8,6 +8,8 @@ from models.user_model import User
 from utils.password_hashing import hash_password, verify_password
 
 JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+if not JWT_SECRET_KEY:
+    raise RuntimeError("JWT_SECRET_KEY is not set — check your .env file")
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRY_HOURS = int(os.getenv("JWT_EXPIRY_HOURS", 24))
 
