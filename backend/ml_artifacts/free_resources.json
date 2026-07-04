@@ -1,0 +1,882 @@
+{
+  "python": [
+    {
+      "video_id": "_uQrJ0TkZlc",
+      "title": "Python Full Course for Beginners",
+      "channel": "Programming with Mosh",
+      "description": "Learn Python for AI, machine learning, and web development with this beginner-friendly course! Get 6 months of PyCharm ...",
+      "view_count": 48188984,
+      "duration": "PT6H14M7S",
+      "url": "https://www.youtube.com/watch?v=_uQrJ0TkZlc",
+      "curation_reason": "This highly-viewed video from a reputable channel explicitly states it is a 'Full Course for Beginners,' indicating comprehensive and structured learning."
+    },
+    {
+      "video_id": "rfscVS0vtbw",
+      "title": "Learn Python - Full Course for Beginners [Tutorial]",
+      "channel": "freeCodeCamp.org",
+      "description": "This course will give you a full introduction into all of the core concepts in python. Follow along with the videos and you'll be a ...",
+      "view_count": 48946414,
+      "duration": "PT4H26M52S",
+      "url": "https://www.youtube.com/watch?v=rfscVS0vtbw",
+      "curation_reason": "This extremely popular video from freeCodeCamp.org is titled a 'Full Course for Beginners [Tutorial],' making it ideal for structured learning from a trusted educational source."
+    }
+  ],
+  "java": [
+    {
+      "video_id": "eIrMbAQSU34",
+      "title": "Java Full Course for Beginners",
+      "channel": "Programming with Mosh",
+      "description": "Master Java – a must-have language for software development, Android apps, and more! ☕️ This beginner-friendly course takes ...",
+      "view_count": 14096303,
+      "duration": "PT2H30M48S",
+      "url": "https://www.youtube.com/watch?v=eIrMbAQSU34",
+      "curation_reason": "Programming with Mosh is a highly reputable channel, and this 'Java Full Course for Beginners' is exceptionally popular and well-regarded for its clear, structured approach."
+    },
+    {
+      "video_id": "A74TOX803D0",
+      "title": "Java Programming for Beginners – Full Course",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn the Java programming language in this complete beginner's course. You will learn all the main features of Java (version 17) ...",
+      "view_count": 1851279,
+      "duration": "PT4H11M",
+      "url": "https://www.youtube.com/watch?v=A74TOX803D0",
+      "curation_reason": "freeCodeCamp.org is renowned for producing comprehensive and high-quality programming courses, making this 'Full Course' an excellent structured resource for genuine beginners."
+    }
+  ],
+  "sql": [
+    {
+      "video_id": "7S_tz1z_5bA",
+      "title": "SQL Course for Beginners [Full Course]",
+      "channel": "Programming with Mosh",
+      "description": "Master SQL – an essential skill for AI, machine learning, data analysis, and more! This beginner-friendly course teaches you ...",
+      "view_count": 14590757,
+      "duration": "PT3H10M19S",
+      "url": "https://www.youtube.com/watch?v=7S_tz1z_5bA",
+      "curation_reason": "This is a full, structured course from a highly reputable educator known for clear and comprehensive beginner-friendly content."
+    },
+    {
+      "video_id": "HXV3zeQKqGY",
+      "title": "SQL Tutorial - Full Database Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "In this course, we'll be looking at database management basics and SQL using the MySQL RDBMS. The course is designed for ...",
+      "view_count": 20779099,
+      "duration": "PT4H20M39S",
+      "url": "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+      "curation_reason": "This is a full database course from freeCodeCamp.org, a well-regarded source for extensive, structured, and high-quality free learning resources."
+    }
+  ],
+  "javascript": [
+    {
+      "video_id": "PkZNo7MFNFg",
+      "title": "Learn JavaScript - Full Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "This complete 134-part JavaScript tutorial for beginners will teach you everything you need to know to get started with the ...",
+      "view_count": 20814356,
+      "duration": "PT3H26M43S",
+      "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "curation_reason": "freeCodeCamp.org is a highly reputable source for free, comprehensive, and well-structured courses, ideal for genuine beginners."
+    },
+    {
+      "video_id": "W6NZfCO5SIk",
+      "title": "JavaScript Course for Beginners – Your First Step to Web Development",
+      "channel": "Programming with Mosh",
+      "description": "Learn JavaScript basics with this quick, beginner-friendly course! ⚡ Perfect for new coders ready to build real skills and start ...",
+      "view_count": 15103766,
+      "duration": "PT48M17S",
+      "url": "https://www.youtube.com/watch?v=W6NZfCO5SIk",
+      "curation_reason": "Programming with Mosh is known for producing clear, high-quality, and beginner-friendly programming courses with a structured approach."
+    }
+  ],
+  "git": [
+    {
+      "video_id": "8JJ101D3knE",
+      "title": "Git Tutorial for Beginners: Learn Git in 1 Hour",
+      "channel": "Programming with Mosh",
+      "description": "Git: The essential tool for modern development. This quick explainer shows why it's a must-have skill. Ready for a deep dive ...",
+      "view_count": 3429566,
+      "duration": "PT1H9M13S",
+      "url": "https://www.youtube.com/watch?v=8JJ101D3knE",
+      "curation_reason": "Programming with Mosh is a highly reputable channel known for clear and concise beginner tutorials, offering a structured introduction to Git."
+    },
+    {
+      "video_id": "zTjRZNkhiEU",
+      "title": "Learn Git – Full Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "In this Git course for beginners, you will learn the essentials of version control to help you manage your projects more efficiently.",
+      "view_count": 1433607,
+      "duration": "PT3H43M34S",
+      "url": "https://www.youtube.com/watch?v=zTjRZNkhiEU",
+      "curation_reason": "freeCodeCamp.org is an excellent source for comprehensive learning, and this explicitly titled 'Full Course' provides an in-depth, structured experience for beginners."
+    }
+  ],
+  "aws": [
+    {
+      "video_id": "k1RI5locZE4",
+      "title": "AWS Tutorial For Beginners | AWS Full Course - Learn AWS In 10 Hours | AWS Training | Edureka",
+      "channel": "edureka!",
+      "description": "Edureka AWS Certification Training (Use Code \"YOUTUBE20\") - https://www.edureka.co/aws-certification-training This ...",
+      "view_count": 5654613,
+      "duration": "PT9H28M40S",
+      "url": "https://www.youtube.com/watch?v=k1RI5locZE4",
+      "curation_reason": "This offers a comprehensive 10-hour full course specifically tailored for AWS beginners from a reputable training channel."
+    },
+    {
+      "video_id": "3hLmDS179YE",
+      "title": "AWS Certified Cloud Practitioner Training 2020 - Full Course",
+      "channel": "freeCodeCamp.org",
+      "description": "This course will help you become an AWS Certified Cloud Practitioner. You will get a complete understanding of the AWS Cloud ...",
+      "view_count": 7471857,
+      "duration": "PT3H58M1S",
+      "url": "https://www.youtube.com/watch?v=3hLmDS179YE",
+      "curation_reason": "This is a full, structured course from a highly respected educational channel, aimed at the foundational AWS Certified Cloud Practitioner certification perfect for beginners."
+    }
+  ],
+  "docker": [
+    {
+      "video_id": "3c-iBn73dDE",
+      "title": "Docker Tutorial for Beginners [FULL COURSE in 3 Hours]",
+      "channel": "TechWorld with Nana",
+      "description": "Grab your free DevOps Roadmap: https://bit.ly/3GE9mzp Full Docker Tutorial | Complete Docker Course | Hands-on course with a ...",
+      "view_count": 6326564,
+      "duration": "PT2H46M15S",
+      "url": "https://www.youtube.com/watch?v=3c-iBn73dDE",
+      "curation_reason": "This video is a designated 'FULL COURSE' explicitly for beginners from a highly reputable channel, ensuring comprehensive and structured learning."
+    },
+    {
+      "video_id": "fqMOX6JJhGo",
+      "title": "Docker Tutorial for Beginners - A Full DevOps Course on How to Run Applications in Containers",
+      "channel": "freeCodeCamp.org",
+      "description": "Get started using Docker with this end-to-end beginners course with hands-on labs. Docker is an open platform for developers ...",
+      "view_count": 2879474,
+      "duration": "PT2H10M19S",
+      "url": "https://www.youtube.com/watch?v=fqMOX6JJhGo",
+      "curation_reason": "Provided by freeCodeCamp.org, a trusted source, this is a 'Full DevOps Course' specifically for beginners, guaranteeing a structured and in-depth learning path."
+    }
+  ],
+  "azure": [
+    {
+      "video_id": "tDuruX7XSac",
+      "title": "Azure Full Course - Learn Microsoft Azure in 8 Hours | Azure Tutorial For Beginners | Edureka",
+      "channel": "edureka!",
+      "description": "Edureka Azure Training (Use Code \"YOUTUBE20\") ...",
+      "view_count": 3064051,
+      "duration": "PT7H58M47S",
+      "url": "https://www.youtube.com/watch?v=tDuruX7XSac",
+      "curation_reason": "This is a comprehensive 8-hour 'Full Course' for beginners from a reputable channel, indicating a well-structured and in-depth tutorial."
+    },
+    {
+      "video_id": "5abffC-K40c",
+      "title": "Microsoft Azure Fundamentals Certification Course (AZ-900) UPDATED – Pass the exam in 8 hours!",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn about Microsoft Azure and pass the Azure Fundamentals exam! The Azure Fundamentals exam (AZ-900) is an opportunity ...",
+      "view_count": 1593112,
+      "duration": "PT8H21M49S",
+      "url": "https://www.youtube.com/watch?v=5abffC-K40c",
+      "curation_reason": "This is an 8-hour 'Certification Course' specifically for the AZ-900 fundamentals exam from the highly reputable freeCodeCamp.org, making it an ideal structured learning path for beginners."
+    }
+  ],
+  "c++": [
+    {
+      "video_id": "vLnPwxZdW4Y",
+      "title": "C++ Tutorial for Beginners - Full Course",
+      "channel": "freeCodeCamp.org",
+      "description": "This course will give you a full introduction into all of the core concepts in C++. ❤️ Support for this channel comes from our ...",
+      "view_count": 13458155,
+      "duration": "PT4H1M19S",
+      "url": "https://www.youtube.com/watch?v=vLnPwxZdW4Y",
+      "curation_reason": "This is a full, dedicated C++ tutorial explicitly for beginners from the highly reputable freeCodeCamp.org channel."
+    },
+    {
+      "video_id": "8jLOx1hD3_o",
+      "title": "C++ Programming Course - Beginner to Advanced",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn modern C++ 20 programming in this comprehensive course. Source code: ...",
+      "view_count": 7708429,
+      "duration": "P1DT7H7M30S",
+      "url": "https://www.youtube.com/watch?v=8jLOx1hD3_o",
+      "curation_reason": "This is a comprehensive C++ programming course covering beginner to advanced topics, also from the reputable freeCodeCamp.org channel."
+    }
+  ],
+  "kubernetes": [
+    {
+      "video_id": "X48VuDVv0do",
+      "title": "Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]",
+      "channel": "TechWorld with Nana",
+      "description": "Grab your free DevOps Roadmap: https://bit.ly/3RUQ7UK Become a DevOps Engineer - full educational program: ...",
+      "view_count": 10018009,
+      "duration": "PT3H36M55S",
+      "url": "https://www.youtube.com/watch?v=X48VuDVv0do",
+      "curation_reason": "This is a full, comprehensive 4-hour course by a highly reputable channel, ideal for genuine beginners seeking structured learning."
+    },
+    {
+      "video_id": "d6WC5n9G_sM",
+      "title": "Kubernetes Course - Full Beginners Tutorial (Containerize Your Apps!)",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn how to use Kubernetes in this complete course. Kubernetes makes it possible to containerize applications and simplifies ...",
+      "view_count": 801752,
+      "duration": "PT2H58M1S",
+      "url": "https://www.youtube.com/watch?v=d6WC5n9G_sM",
+      "curation_reason": "Provided by freeCodeCamp.org, an extremely reliable source for full-length tutorials, this video offers a complete beginner's course."
+    }
+  ],
+  "tableau": [
+    {
+      "video_id": "aHaOIvR00So",
+      "title": "Tableau Full Course - Learn Tableau in 6 Hours | Tableau Training for Beginners | Edureka",
+      "channel": "edureka!",
+      "description": "Edureka Tableau Certification Training (Use Code \"YOUTUBE20\"): https://www.edureka.co/tableau-certification-training ...",
+      "view_count": 3778162,
+      "duration": "PT6H14S",
+      "url": "https://www.youtube.com/watch?v=aHaOIvR00So",
+      "curation_reason": "This video is explicitly a 'Full Course' for 'Beginners' from a reputable educational channel (Edureka) and offers a comprehensive 6-hour introduction."
+    },
+    {
+      "video_id": "K3pXnbniUcM",
+      "title": "Tableau Ultimate Full Course (21 Hours) for Beginners - From Zero to HERO",
+      "channel": "Data with Baraa",
+      "description": "Spent 2 years creating a 21-hour, high-quality course that covers everything about Tableau using visual learning. The best part?",
+      "view_count": 1074048,
+      "duration": "PT20H47M5S",
+      "url": "https://www.youtube.com/watch?v=K3pXnbniUcM",
+      "curation_reason": "This is an 'Ultimate Full Course' (21 hours) explicitly designed 'For Beginners - From Zero to HERO', indicating a highly structured and comprehensive learning path."
+    }
+  ],
+  "c#": [
+    {
+      "video_id": "GhQdlIFylQ8",
+      "title": "C# Tutorial - Full Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "This course will give you a full introduction into all of the core concepts in C# (aka C Sharp). Follow along with the course and ...",
+      "view_count": 8959932,
+      "duration": "PT4H31M9S",
+      "url": "https://www.youtube.com/watch?v=GhQdlIFylQ8",
+      "curation_reason": "This is a highly popular and comprehensive 'Full Course for Beginners' from the reputable freeCodeCamp.org, making it an excellent starting point."
+    },
+    {
+      "video_id": "0QUgvfuKvWU",
+      "title": "C# Fundamentals for Beginners",
+      "channel": "Microsoft Developer",
+      "description": "Check out the new Foundational C# Certification by freeCodeCamp: https://aka.ms/csharp-certification Classic Throwback Series ...",
+      "view_count": 729101,
+      "duration": "PT8H13M30S",
+      "url": "https://www.youtube.com/watch?v=0QUgvfuKvWU",
+      "curation_reason": "This course offers authoritative 'Fundamentals for Beginners' directly from Microsoft Developer, providing a solid and official foundation for learning C#."
+    }
+  ],
+  "power bi": [
+    {
+      "video_id": "c7LrqSxjJQQ",
+      "title": "Power BI Tutorial For Beginners | Create Your First Dashboard Now (Practice Files included)",
+      "channel": "Leila Gharani",
+      "description": "Join our popular FREE Power BI beginners course today! https://link.xelplus.com/yt-d-powerbi-starter In just 20 minutes, you'll ...",
+      "view_count": 2944416,
+      "duration": "PT23M3S",
+      "url": "https://www.youtube.com/watch?v=c7LrqSxjJQQ",
+      "curation_reason": "This tutorial is led by a highly reputed instructor, explicitly targets beginners, includes valuable practice files, and has the highest view count, signaling a practical and widely appreciated learning experience."
+    },
+    {
+      "video_id": "Dk25lwdTKow",
+      "title": "Power BI FULL COURSE for Beginners | Learn Dashboards &amp; Reports Fast!",
+      "channel": "Pragmatic Works",
+      "description": "Power BI tutorial for beginners and professionals. Learn Power BI step by step in this full course covering data cleaning, Power ...",
+      "view_count": 1138545,
+      "duration": "PT3H40M48S",
+      "url": "https://www.youtube.com/watch?v=Dk25lwdTKow",
+      "curation_reason": "This is a comprehensive 'FULL COURSE' from Pragmatic Works, a well-known channel specializing in Microsoft technologies, making it an excellent structured resource for beginners to learn Power BI dashboards and reports."
+    }
+  ],
+  "react": [
+    {
+      "video_id": "x4rFhThSX04",
+      "title": "Learn React JS - Full Beginner’s Tutorial &amp; Practice Projects",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn modern React basics in the most interactive, hands-on way possible in the full course for beginners. Throughout this tutorial ...",
+      "view_count": 1062485,
+      "duration": "PT15H40M54S",
+      "url": "https://www.youtube.com/watch?v=x4rFhThSX04",
+      "curation_reason": "freeCodeCamp.org is highly reputable for comprehensive, beginner-friendly full tutorials that include practice projects, making it ideal for a structured learning path."
+    },
+    {
+      "video_id": "TtPXvEcE11E",
+      "title": "React Tutorial Full Course - Beginner to Pro (React 19, 2025)",
+      "channel": "SuperSimpleDev",
+      "description": "In this React tutorial and React full course, build websites and projects with React. React Premium Course: ...",
+      "view_count": 1147679,
+      "duration": "PT11H32M4S",
+      "url": "https://www.youtube.com/watch?v=TtPXvEcE11E",
+      "curation_reason": "This 'Full Course' from SuperSimpleDev offers an up-to-date and comprehensive learning path from beginner to professional, aligning with the need for a structured curriculum."
+    }
+  ],
+  "node.js": [
+    {
+      "video_id": "f2EqECiTBL8",
+      "title": "Node.js Full Course for Beginners | Complete All-in-One Tutorial | 7 Hours",
+      "channel": "Dave Gray",
+      "description": "Web Dev Roadmap for Beginners (Free!): https://bit.ly/DaveGrayWebDevRoadmap This Node.js Full Course for Beginners is an ...",
+      "view_count": 1451414,
+      "duration": "PT6H50M42S",
+      "url": "https://www.youtube.com/watch?v=f2EqECiTBL8",
+      "curation_reason": "This is explicitly a \"Full Course for Beginners\" with a substantial 7-hour length, offering comprehensive foundational learning from a reputable educator."
+    },
+    {
+      "video_id": "Oe421EPjeBE",
+      "title": "Node.js and Express.js - Full Course",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn how to use Node and Express in this comprehensive course. First, you will learn the fundamentals of Node and Express.",
+      "view_count": 4351878,
+      "duration": "PT8H16M48S",
+      "url": "https://www.youtube.com/watch?v=Oe421EPjeBE",
+      "curation_reason": "As a \"Full Course\" from the highly reputable freeCodeCamp.org, it provides a practical and comprehensive learning path covering both Node.js and its essential Express.js framework."
+    }
+  ],
+  "machine learning": [
+    {
+      "video_id": "i_LwzRVP7bg",
+      "title": "Machine Learning for Everybody – Full Course",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn Machine Learning in a way that is accessible to absolute beginners. You will learn the basics of Machine Learning and how ...",
+      "view_count": 10128367,
+      "duration": "PT3H53M53S",
+      "url": "https://www.youtube.com/watch?v=i_LwzRVP7bg",
+      "curation_reason": "This is a comprehensive full course designed for accessibility from a highly reputable educational channel, making it ideal for beginners."
+    },
+    {
+      "video_id": "jGwO_UgTS7I",
+      "title": "Stanford CS229: Machine Learning Course, Lecture 1 - Andrew Ng (Autumn 2018)",
+      "channel": "Stanford Online",
+      "description": "For more information about Stanford's Artificial Intelligence professional and graduate programs, visit: https://stanford.io/ai Listen ...",
+      "view_count": 4570601,
+      "duration": "PT1H15M20S",
+      "url": "https://www.youtube.com/watch?v=jGwO_UgTS7I",
+      "curation_reason": "This is a foundational university-level course from Stanford, taught by Andrew Ng, offering a rigorous and comprehensive introduction to machine learning."
+    }
+  ],
+  "data analysis": [
+    {
+      "video_id": "vqZ1C2elmac",
+      "title": "Data Analytics Tutorial For Beginners Complete Course | Foundations: Data, Data, Everywhere, Google",
+      "channel": "My Lesson",
+      "description": "Data Analytics Professional Certificate Complete Courses.",
+      "view_count": 657632,
+      "duration": "PT2H35M41S",
+      "url": "https://www.youtube.com/watch?v=vqZ1C2elmac",
+      "curation_reason": "This video explicitly states 'Complete Course' and 'Foundations' for beginners, suggesting a comprehensive and structured introduction to data analytics concepts."
+    },
+    {
+      "video_id": "pCJ15nGFgVg",
+      "title": "Excel for Data Analytics - Full Course for Beginners",
+      "channel": "Luke Barousse",
+      "description": "FREE Course Files & Projects https://lukeb.co/excel_files Supporter Access: Problems, Certificate, & More ...",
+      "view_count": 3102313,
+      "duration": "PT10H59M43S",
+      "url": "https://www.youtube.com/watch?v=pCJ15nGFgVg",
+      "curation_reason": "This is a 'Full Course for Beginners' focused on Excel, a fundamental tool for data analysis, from a highly reputable channel known for quality tutorials."
+    }
+  ],
+  "excel": [
+    {
+      "video_id": "wbJcJCkBcMg",
+      "title": "Excel for Beginners - The Complete Course",
+      "channel": "Technology for Teachers and Students",
+      "description": "This is the beginning Excel course that you've been waiting for! Learn everything you need to effectively use Excel by watching ...",
+      "view_count": 16943304,
+      "duration": "PT54M55S",
+      "url": "https://www.youtube.com/watch?v=wbJcJCkBcMg",
+      "curation_reason": "Clearly labeled as a 'Complete Course for Beginners' from an educational channel, suggesting comprehensive and structured learning."
+    },
+    {
+      "video_id": "Vl0H-qTclOg",
+      "title": "Microsoft Excel Tutorial for Beginners - Full Course",
+      "channel": "freeCodeCamp.org",
+      "description": "Lean how to use Microsoft Excel from the beginning by creating 6 real-world projects. Most of the content applies to Google ...",
+      "view_count": 11613712,
+      "duration": "PT2H26M10S",
+      "url": "https://www.youtube.com/watch?v=Vl0H-qTclOg",
+      "curation_reason": "Explicitly titled a 'Full Course for Beginners' from the highly reputable freeCodeCamp, ensuring quality and comprehensiveness."
+    }
+  ],
+  "html": [
+    {
+      "video_id": "kUMe1FH4CHE",
+      "title": "Learn HTML – Full Tutorial for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn HTML in this complete course for beginners. This is an all-in-one beginner tutorial to help you learn web development skills.",
+      "view_count": 4353239,
+      "duration": "PT4H7M30S",
+      "url": "https://www.youtube.com/watch?v=kUMe1FH4CHE",
+      "curation_reason": "freeCodeCamp.org is a highly reputable source known for comprehensive, free coding tutorials, making this 'Full Tutorial for Beginners' an excellent structured resource."
+    },
+    {
+      "video_id": "qz0aGYrrlhU",
+      "title": "HTML Tutorial for Beginners: HTML Crash Course",
+      "channel": "Programming with Mosh",
+      "description": "Start your web development career with HTML/CSS! This beginner-friendly tutorial covers the essentials. Want to master ...",
+      "view_count": 10936165,
+      "duration": "PT1H9M34S",
+      "url": "https://www.youtube.com/watch?v=qz0aGYrrlhU",
+      "curation_reason": "Programming with Mosh is a well-respected channel for beginners, and his 'HTML Crash Course' is a popular and likely comprehensive introduction to HTML."
+    }
+  ],
+  "css": [
+    {
+      "video_id": "OXGznpKZ_sA",
+      "title": "CSS Tutorial – Full Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "In this in-depth course, you will learn about all the key features of CSS. This is the most comprehensive CSS course we've ...",
+      "view_count": 2906137,
+      "duration": "PT11H8M10S",
+      "url": "https://www.youtube.com/watch?v=OXGznpKZ_sA",
+      "curation_reason": "This is a dedicated, comprehensive 'Full Course for Beginners' from freeCodeCamp, a highly reputable educational channel known for structured learning."
+    },
+    {
+      "video_id": "G3e-cpL7ofc",
+      "title": "HTML &amp; CSS Full Course - Beginner to Pro",
+      "channel": "SuperSimpleDev",
+      "description": "Get a certificate for this course: https://courses.supersimple.dev/courses/html-css or Frontend Bundle (React, JS, HTML CSS): ...",
+      "view_count": 19168868,
+      "duration": "PT6H31M16S",
+      "url": "https://www.youtube.com/watch?v=G3e-cpL7ofc",
+      "curation_reason": "This 'Full Course' covers both HTML and CSS from a highly reputable channel, providing a complete and structured foundation essential for any genuine beginner in web development."
+    }
+  ],
+  "project management": [
+    {
+      "video_id": "ZKOL-rZ79gs",
+      "title": "Project Management Simplified: Learn The Fundamentals of PMI&#39;s Framework ✓",
+      "channel": "Deniz Sasal",
+      "description": "Project Management is simple enough to understand. No need to complicate things unnecessarily. PM Templates: ...",
+      "view_count": 3515365,
+      "duration": "PT48M19S",
+      "url": "https://www.youtube.com/watch?v=ZKOL-rZ79gs",
+      "curation_reason": "This highly viewed video offers a simplified introduction to the fundamental PMI framework, making it excellent for genuine beginners."
+    },
+    {
+      "video_id": "uWPIsaYpY7U",
+      "title": "Project Management Full Course In 8 Hours | Project Management Training | Simplilearn",
+      "channel": "Simplilearn",
+      "description": "PMP ...",
+      "view_count": 2303284,
+      "duration": "PT8H6M6S",
+      "url": "https://www.youtube.com/watch?v=uWPIsaYpY7U",
+      "curation_reason": "This extensive 8-hour full course from a reputable educational channel provides comprehensive training ideal for beginners."
+    }
+  ],
+  "ci/cd": [
+    {
+      "video_id": "R8_veQiYBjI",
+      "title": "GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker",
+      "channel": "TechWorld with Nana",
+      "description": "Grab your free DevOps Roadmap: https://bit.ly/3YC0r7Y Complete Github Actions Tutorial | GitHub Actions CI/CD | GitHub Actions ...",
+      "view_count": 2193753,
+      "duration": "PT32M31S",
+      "url": "https://www.youtube.com/watch?v=R8_veQiYBjI",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "scEDHsr3APg",
+      "title": "DevOps CI/CD Explained in 100 Seconds",
+      "channel": "Fireship",
+      "description": "What is DevOps? How to setup a CI/CD pipeline? Learn the basics of continuous integration & delivery and how it can optimize ...",
+      "view_count": 1793961,
+      "duration": "PT1M56S",
+      "url": "https://www.youtube.com/watch?v=scEDHsr3APg",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "linux": [
+    {
+      "video_id": "VbEx7B_PTOE",
+      "title": "Linux for Hackers // EP 1 (FREE Linux course for beginners)",
+      "channel": "NetworkChuck",
+      "description": "FREE Linux Hacking Lab: https://ntck.co/htbacad *Sponsored by HTB Academy --------------------------------------------------- Sign up for ...",
+      "view_count": 3488331,
+      "duration": "PT11M33S",
+      "url": "https://www.youtube.com/watch?v=VbEx7B_PTOE",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "sWbUDq4S6Y8",
+      "title": "Introduction to Linux – Full Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "If you're new to Linux, this beginner's course is for you. You'll learn many of the tools used every day by both Linux SysAdmins ...",
+      "view_count": 3173770,
+      "duration": "PT6H7M32S",
+      "url": "https://www.youtube.com/watch?v=sWbUDq4S6Y8",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "mongodb": [
+    {
+      "video_id": "c2M-rlkkT5o",
+      "title": "Learn MongoDB in 1 hour 🍃",
+      "channel": "Bro Code",
+      "description": "MongoDB #course #tutorial This video will give you and introduction to MongoDB in 1 Hour. Afterwards I recommend exploring ...",
+      "view_count": 1886198,
+      "duration": "PT1H",
+      "url": "https://www.youtube.com/watch?v=c2M-rlkkT5o",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "-bt_y4Loofg",
+      "title": "MongoDB in 100 Seconds",
+      "channel": "Fireship",
+      "description": "MongoDB is the world's most popular document database with powerful capabilities like full-text search, geospatial queries, data ...",
+      "view_count": 1409494,
+      "duration": "PT2M27S",
+      "url": "https://www.youtube.com/watch?v=-bt_y4Loofg",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "postgresql": [
+    {
+      "video_id": "qw--VYLpxG4",
+      "title": "Learn PostgreSQL Tutorial - Full Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn how to use PostgreSQL in this full course. PostgreSQL is a general purpose and object-relational database management ...",
+      "view_count": 3220349,
+      "duration": "PT4H19M34S",
+      "url": "https://www.youtube.com/watch?v=qw--VYLpxG4",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "n2Fluyr3lbc",
+      "title": "PostgreSQL in 100 Seconds",
+      "channel": "Fireship",
+      "description": "Try Postgres with Neon https://bit.ly/neon-fireship right now. Postgres is one of the most popular open-source SQL databases.",
+      "view_count": 1219499,
+      "duration": "PT2M37S",
+      "url": "https://www.youtube.com/watch?v=n2Fluyr3lbc",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "rest api": [
+    {
+      "video_id": "WXsD0ZgxjRw",
+      "title": "APIs for Beginners - How to use an API (Full Course / Tutorial)",
+      "channel": "freeCodeCamp.org",
+      "description": "What is an API? Learn all about APIs (Application Programming Interfaces) in this full tutorial for beginners. You will learn what ...",
+      "view_count": 4183048,
+      "duration": "PT3H7M7S",
+      "url": "https://www.youtube.com/watch?v=WXsD0ZgxjRw",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "GHTA143_b-s",
+      "title": "NestJs Course for Beginners - Create a REST API",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn NestJs by building a CRUD REST API with end-to-end tests using modern web development techniques. NestJs is a rapidly ...",
+      "view_count": 1988724,
+      "duration": "PT3H42M9S",
+      "url": "https://www.youtube.com/watch?v=GHTA143_b-s",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "typescript": [
+    {
+      "video_id": "d56mG7DezGs",
+      "title": "TypeScript Tutorial for Beginners",
+      "channel": "Programming with Mosh",
+      "description": "Write better, more scalable JavaScript with TypeScript! This beginner-friendly tutorial gets you started fast. Ready for a deep ...",
+      "view_count": 2095498,
+      "duration": "PT1H4M28S",
+      "url": "https://www.youtube.com/watch?v=d56mG7DezGs",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "BwuLxPH8IDs",
+      "title": "TypeScript Course for Beginners - Learn TypeScript from Scratch!",
+      "channel": "Academind",
+      "description": "Free TypeScript Introduction for Beginners: Get Started with TypeScript, learn the Basics, its Features, Workflows and how to use it ...",
+      "view_count": 1842171,
+      "duration": "PT3H16M40S",
+      "url": "https://www.youtube.com/watch?v=BwuLxPH8IDs",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "agile": [
+    {
+      "video_id": "VFQtSqChlsk",
+      "title": "Agile Scrum Full Course In 4 Hours | Agile Scrum Master Training | Agile Training Video |Simplilearn",
+      "channel": "Simplilearn",
+      "description": "Certified ScrumMaster (CSM) Certification Training ...",
+      "view_count": 1379022,
+      "duration": "PT3H24M58S",
+      "url": "https://www.youtube.com/watch?v=VFQtSqChlsk",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "8eVXTyIZ1Hs",
+      "title": "What Is Agile Methodology? | Introduction to Agile Methodology in Six Minutes | Simplilearn",
+      "channel": "Simplilearn",
+      "description": "Certified ScrumMaster (CSM) Certification Training ...",
+      "view_count": 1166178,
+      "duration": "PT6M23S",
+      "url": "https://www.youtube.com/watch?v=8eVXTyIZ1Hs",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "terraform": [
+    {
+      "video_id": "SLB_c_ayRMo",
+      "title": "Terraform Course - Automate your AWS cloud infrastructure",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn Terraform in this complete course for beginners. Terraform is an open-source infrastructure as code software tool. Learn ...",
+      "view_count": 2144346,
+      "duration": "PT2H20M58S",
+      "url": "https://www.youtube.com/watch?v=SLB_c_ayRMo",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "l5k1ai_GBDE",
+      "title": "Terraform explained in 15 mins | Terraform Tutorial for Beginners",
+      "channel": "TechWorld with Nana",
+      "description": "Terraform explained for Beginners | Terraform Tutorial for Beginners | Terraform Architecture explained Understand what ...",
+      "view_count": 2116039,
+      "duration": "PT18M15S",
+      "url": "https://www.youtube.com/watch?v=l5k1ai_GBDE",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "jenkins": [
+    {
+      "video_id": "FX322RVNGj4",
+      "title": "Jenkins Full Course | Jenkins Tutorial For Beginners | Jenkins Tutorial | Simplilearn",
+      "channel": "Simplilearn",
+      "description": "IITM - AI-Powered Cloud Computing and DevOps Certification Program (India Only) ...",
+      "view_count": 1414494,
+      "duration": "PT2H56M7S",
+      "url": "https://www.youtube.com/watch?v=FX322RVNGj4",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "LFDrDnKPOTg",
+      "title": "What Is Jenkins? | What Is Jenkins And How It Works? | Jenkins Tutorial For Beginners | Simplilearn",
+      "channel": "Simplilearn",
+      "description": "IITM - AI-Powered Cloud Computing and DevOps Certification Program (India Only) ...",
+      "view_count": 1346120,
+      "duration": "PT19M53S",
+      "url": "https://www.youtube.com/watch?v=LFDrDnKPOTg",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "figma": [
+    {
+      "video_id": "kbZejnPXyLM",
+      "title": "Free Figma UX Design UI Essentials Course",
+      "channel": "Bring Your Own Laptop",
+      "description": "Watch + join BYOL for the full Figma course and 10% off: https://byol.com/fer25l Download the free exercise files: ...",
+      "view_count": 3007258,
+      "duration": "PT2H57M40S",
+      "url": "https://www.youtube.com/watch?v=kbZejnPXyLM",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "jwCmIBJ8Jtc",
+      "title": "Figma Tutorial for UI Design - Course for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "In this Figma course, you will learn how to use Figma for UI Design. Figma is a vector graphics editor and prototyping tool.",
+      "view_count": 2118911,
+      "duration": "PT10H16M51S",
+      "url": "https://www.youtube.com/watch?v=jwCmIBJ8Jtc",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "salesforce": [
+    {
+      "video_id": "f1AMkMQw-p4",
+      "title": "Salesforce Tutorial For Beginners | Introduction To Salesforce | Salesforce Training | Simplilearn",
+      "channel": "Simplilearn",
+      "description": "Discover SKillUP free online certification programs ...",
+      "view_count": 1191677,
+      "duration": "PT3H33M36S",
+      "url": "https://www.youtube.com/watch?v=f1AMkMQw-p4",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "jHzIGGU-Ph0",
+      "title": "Salesforce CRM Full Training Tutorial For Beginners | 2022",
+      "channel": "Nick Boardman",
+      "description": "Need Help With Salesforce? Go here: https://www.crmcrew.com/sf In this video I explain how to use the key features inside ...",
+      "view_count": 968878,
+      "duration": "PT40M26S",
+      "url": "https://www.youtube.com/watch?v=jHzIGGU-Ph0",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "sap": [
+    {
+      "video_id": "Nfq3OC6B-CU",
+      "title": "SAP Tutorial for beginners  - SAP ERP",
+      "channel": "myTech-school",
+      "description": "Visit https://mytech-school.com/ For SAP Module specific video training.",
+      "view_count": 7489899,
+      "duration": "PT34M9S",
+      "url": "https://www.youtube.com/watch?v=Nfq3OC6B-CU",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "JjrcxsniXvc",
+      "title": "What is SAP? | SAP tutorial for beginners | Learn SAP | SAP ERP training for beginners",
+      "channel": "BuddyFromIT",
+      "description": "THE COMPLETE SAP ERP TUTORIAL FOR BEGINNERS In English: https://www.udemy.com/course/sap-for-beginners-2021/?",
+      "view_count": 1298796,
+      "duration": "PT10M9S",
+      "url": "https://www.youtube.com/watch?v=JjrcxsniXvc",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "spring boot": [
+    {
+      "video_id": "35EQXmHKZYs",
+      "title": "Spring Boot Tutorials | Full Course",
+      "channel": "Telusko",
+      "description": "Check out our courses: DevOps Bootcamp: https://go.telusko.com/complete-devops Coupon: TELUSKO10 (10% Discount) Master ...",
+      "view_count": 3684090,
+      "duration": "PT2H48M8S",
+      "url": "https://www.youtube.com/watch?v=35EQXmHKZYs",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "-Fe0zk-F4OA",
+      "title": "Spring Framework and Spring Boot Tutorial with Project",
+      "channel": "Telusko",
+      "description": "Learn Spring and Spring Boot by building project. Check out our courses: Mastering Agentic AI with Java: Spring AI, LangChain4j, ...",
+      "view_count": 1091519,
+      "duration": "PT5H25M26S",
+      "url": "https://www.youtube.com/watch?v=-Fe0zk-F4OA",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "django": [
+    {
+      "video_id": "rHux0gMZ3Eg",
+      "title": "Django Tutorial for Beginners – Build Powerful Backends",
+      "channel": "Programming with Mosh",
+      "description": "Learn Django and start building amazing back-ends! This beginner-friendly course guides you through Django's essentials, ...",
+      "view_count": 3409925,
+      "duration": "PT1H2M36S",
+      "url": "https://www.youtube.com/watch?v=rHux0gMZ3Eg",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "PtQiiknWUcI",
+      "title": "Python Django 7 Hour Course",
+      "channel": "Traversy Media",
+      "description": "Build a discord-like application with Python Django. Visit the finished application at https://studybuddev.herokuapp.com/ Source ...",
+      "view_count": 2224882,
+      "duration": "PT7H10M5S",
+      "url": "https://www.youtube.com/watch?v=PtQiiknWUcI",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "flask": [
+    {
+      "video_id": "Z1RJmh_OqeA",
+      "title": "Learn Flask for Python - Full Tutorial",
+      "channel": "freeCodeCamp.org",
+      "description": "Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools ...",
+      "view_count": 2294606,
+      "duration": "PT46M59S",
+      "url": "https://www.youtube.com/watch?v=Z1RJmh_OqeA",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "MwZwr5Tvyxo",
+      "title": "Python Flask Tutorial: Full-Featured Web App Part 1 - Getting Started",
+      "channel": "Corey Schafer",
+      "description": "In this Python Flask Tutorial, we will be learning how to get started using the Flask framework. We will install the necessary ...",
+      "view_count": 2110695,
+      "duration": "PT17M9S",
+      "url": "https://www.youtube.com/watch?v=MwZwr5Tvyxo",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "pandas": [
+    {
+      "video_id": "ZyhVh-qRZPA",
+      "title": "Python Pandas Tutorial (Part 1): Getting Started with Data Analysis - Installation and Loading Data",
+      "channel": "Corey Schafer",
+      "description": "In this video, we will be learning how to get started with Pandas using Python. This video is sponsored by Brilliant.",
+      "view_count": 1703051,
+      "duration": "PT23M1S",
+      "url": "https://www.youtube.com/watch?v=ZyhVh-qRZPA",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "2uvysYbKdjM",
+      "title": "Complete Python Pandas Data Science Tutorial! (2025 Updated Edition)",
+      "channel": "Keith Galli",
+      "description": "Hey, what's up everyone? Welcome back to another video! I'm super excited for this one. We're doing another complete Python ...",
+      "view_count": 734351,
+      "duration": "PT1H34M11S",
+      "url": "https://www.youtube.com/watch?v=2uvysYbKdjM",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "numpy": [
+    {
+      "video_id": "QUT1VHiLmmI",
+      "title": "Python NumPy Tutorial for Beginners",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn the basics of the NumPy library in this tutorial for beginners. It provides background information on how NumPy works and ...",
+      "view_count": 2183124,
+      "duration": "PT58M10S",
+      "url": "https://www.youtube.com/watch?v=QUT1VHiLmmI",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "xECXZ3tyONo",
+      "title": "Learn NUMPY in 5 minutes - BEST Python Library!",
+      "channel": "Python Programmer",
+      "description": "Learn Numpy in 5 minutes! A brief introduction to the great python library - Numpy. I cover Numpy Arrays and slicing amongst ...",
+      "view_count": 1091388,
+      "duration": "PT13M38S",
+      "url": "https://www.youtube.com/watch?v=xECXZ3tyONo",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "tensorflow": [
+    {
+      "video_id": "tPYj3fFJGjk",
+      "title": "TensorFlow 2.0 Complete Course - Python Neural Networks for Beginners Tutorial",
+      "channel": "freeCodeCamp.org",
+      "description": "Learn how to use TensorFlow 2.0 in this full tutorial course for beginners. This course is designed for Python programmers looking ...",
+      "view_count": 3472379,
+      "duration": "PT6H52M8S",
+      "url": "https://www.youtube.com/watch?v=tPYj3fFJGjk",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "i8NETqtGHms",
+      "title": "TensorFlow in 100 Seconds",
+      "channel": "Fireship",
+      "description": "TensorFlow is a tool for machine learning capable of building deep neural networks with high-level Python code. It provides ...",
+      "view_count": 1255552,
+      "duration": "PT2M39S",
+      "url": "https://www.youtube.com/watch?v=i8NETqtGHms",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ],
+  "powershell": [
+    {
+      "video_id": "IHrGresKu2w",
+      "title": "Microsoft PowerShell for Beginners - Video 1 Learn PowerShell",
+      "channel": "Shane Young",
+      "description": "This part 1 of a multi-part series for learning PowerShell. This video covers the basics to get you up and running. * Get-Command ...",
+      "view_count": 1864165,
+      "duration": "PT27M57S",
+      "url": "https://www.youtube.com/watch?v=IHrGresKu2w",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    },
+    {
+      "video_id": "UVUd9_k9C6A",
+      "title": "PowerShell For Beginners Full Course | PowerShell Beginner tutorial Full Course",
+      "channel": "Nerd's lesson",
+      "description": "This Jump Start is designed to teach the busy IT Professionals about this powerful management tool. Learn how PowerShell ...",
+      "view_count": 1469597,
+      "duration": "PT6H1M47S",
+      "url": "https://www.youtube.com/watch?v=UVUd9_k9C6A",
+      "curation_reason": "Selected by view count (Gemini curation unavailable)"
+    }
+  ]
+}

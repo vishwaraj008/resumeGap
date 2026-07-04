@@ -1,0 +1,42 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+
+
+
+# Environment files
+.env
+
+
+# Logs and local runtime files
+*.log
+*.sqlite3
+*.db
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local uploads / generated artifacts
+uploads/
+media/
+*.tmp
+*.bak
+
+
+test.py
+myResume.pdf
