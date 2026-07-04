@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skill Gap Report — {{ target_role }}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a2e;
+            line-height: 1.5;
+            padding: 40px;
+            font-size: 13px;
+        }
+
+        .header {
+            border-bottom: 3px solid #0f3460;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            font-size: 22px;
+            color: #0f3460;
+            margin-bottom: 4px;
+        }
+        .header .subtitle {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .section {
+            margin-bottom: 24px;
+        }
+        .section h2 {
+            font-size: 15px;
+            color: #0f3460;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        .match-box {
+            background: #f0f4ff;
+            border-left: 4px solid #0f3460;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+        }
+        .match-box .percent {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0f3460;
+        }
+        .match-box .label {
+            color: #555;
+            font-size: 12px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin: 2px 4px 2px 0;
+            font-size: 11px;
+        }
+        .skill-tag.missing {
+            background: #fce4ec;
+            color: #c62828;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+        table th {
+            background: #0f3460;
+            color: white;
+            text-align: left;
+            padding: 8px 10px;
+            font-size: 11px;
+        }
+        table td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 11px;
+            vertical-align: top;
+        }
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .course-link {
+            color: #1565c0;
+            text-decoration: none;
+        }
+        .free-badge {
+            background: #4caf50;
+            color: white;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+        .paid-badge {
+            background: #ff9800;
+            color: white;
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 9px;
+            margin-left: 4px;
+        }
+
+        .time-estimate {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 12px 16px;
+            margin-top: 16px;
+        }
+        .time-estimate .hours {
+            font-size: 22px;
+            font-weight: bold;
+            color: #e65100;
+        }
+
+        .trajectory {
+            margin-top: 12px;
+        }
+        .trajectory .node {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin-right: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .trajectory .node.current {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            color: #2e7d32;
+        }
+        .trajectory .node.future {
+            background: #f3f3f3;
+            border: 2px solid #999;
+            color: #666;
+        }
+        .trajectory .arrow {
+            display: inline-block;
+            color: #999;
+            margin: 0 4px;
+            font-size: 16px;
+        }
+
+        .footer {
+            margin-top: 32px;
+            padding-top: 12px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Skill Gap Analysis Report</h1>
+        <div class="subtitle">
+            Target Role: <strong>{{ target_role }}</strong> &nbsp;|&nbsp;
+            Generated: {{ generated_date }}
+        </div>
+    </div>
+
+    <!-- Match Summary -->
+    <div class="section">
+        <h2>Match Summary</h2>
+        <div class="match-box">
+            <div class="percent">{{ match_percent }}%</div>
+            <div class="label">Overall skill match for {{ target_role }}</div>
+        </div>
+    </div>
+
+    <!-- Skills You Have -->
+    <div class="section">
+        <h2>Skills You Have ({{ matched_skills|length }})</h2>
+        {% if matched_skills %}
+            {% for skill in matched_skills %}
+                <span class="skill-tag">{{ skill }}</span>
+            {% endfor %}
+        {% else %}
+            <p style="color: #999;">No matching skills found for this role.</p>
+        {% endif %}
+    </div>
+
+    <!-- Skill Gap -->
+    <div class="section">
+        <h2>Skills to Learn ({{ missing_skills|length }})</h2>
+        {% if missing_skills %}
+            {% for skill in missing_skills %}
+                <span class="skill-tag missing">{{ skill }}</span>
+            {% endfor %}
+        {% else %}
+            <p style="color: #4caf50;">No gaps — you're fully qualified!</p>
+        {% endif %}
+    </div>
+
+    <!-- Learning Roadmap -->
+    {% if roadmap %}
+    <div class="section">
+        <h2>Learning Roadmap</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Skill</th>
+                    <th>Recommended Courses</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in roadmap %}
+                <tr>
+                    <td>{{ item.sequence_order }}</td>
+                    <td><strong>{{ item.skill }}</strong></td>
+                    <td>
+                        {% for course in item.course_recommendations %}
+                            <div style="margin-bottom: 4px;">
+                                <a class="course-link" href="{{ course.url }}">{{ course.title }}</a>
+                                {% if course.is_free %}
+                                    <span class="free-badge">FREE</span>
+                                {% else %}
+                                    <span class="paid-badge">PAID</span>
+                                {% endif %}
+                                <span style="color: #888; font-size: 10px;">
+                                    ({{ course.platform }})
+                                </span>
+                            </div>
+                        {% endfor %}
+                    </td>
+                    <td>{{ item.estimated_duration_hours }}h</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="time-estimate">
+            <div class="hours">~{{ total_estimated_hours }} hours</div>
+            <div style="color: #666; font-size: 12px;">Estimated total learning time to close the skill gap</div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Career Trajectory -->
+    {% if trajectory_graph and trajectory_graph.nodes %}
+    <div class="section">
+        <h2>Career Trajectory</h2>
+        <div class="trajectory">
+            {% for node in trajectory_graph.nodes %}
+                {% if not loop.first %}<span class="arrow">→</span>{% endif %}
+                <span class="node {{ 'current' if node.is_current_fit else 'future' }}">
+                    {{ node.role }}
+                </span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        Generated by Skill-Gap Career Path Recommender
+    </div>
+
+</body>
+</html>
