@@ -13,6 +13,9 @@ from routes.resume_routes import router as resume_router
 from routes.matching_routes import router as matching_router
 from routes.roadmap_routes import router as roadmap_router
 from routes.history_routes import router as history_router
+from routes.report_routes import router as report_router
+
+from middleware.error_handler import register_error_handlers
 
 ml_artifacts = {}
 
@@ -51,6 +54,9 @@ app.include_router(resume_router, prefix="/resume", tags=["Resume"])
 app.include_router(matching_router, prefix="/matching", tags=["Matching"])
 app.include_router(roadmap_router, prefix="/roadmap", tags=["Roadmap"])
 app.include_router(history_router, prefix="/history", tags=["History"])
+app.include_router(report_router, prefix="/report", tags=["Report"])
+
+register_error_handlers(app)
 
 
 @app.get("/health")
