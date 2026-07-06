@@ -45,6 +45,28 @@ def handle_resume_upload(db: Session, user_id: int, pdf_bytes: bytes) -> dict:
     }
 
 
+def handle_search_skills(query: str = "", limit: int = 20) -> dict:
+    """Read-only lookup: returns skills from the master skill vocabulary,
+    filtered by a case-insensitive substring `query`. Powers the frontend's
+    manual skill-entry autocomplete so no skill list is hardcoded client-side.
+
+    Prefix matches are ranked before mid-string matches.
+    """
+    from utils.model_loader import get_artifacts
+
+    vocab = get_artifacts()["master_skills_vocab"]  # a set of lowercased skills
+
+    q = (query or "").strip().lower()
+    if q:
+        matches = [s for s in vocab if q in s]
+        matches.sort(key=lambda s: (not s.startswith(q), s))
+    else:
+        matches = sorted(vocab)
+
+    limit = max(1, min(limit, 50))
+    return {"skills": matches[:limit], "total_available": len(vocab)}
+
+
 def handle_text_upload(db: Session, user_id: int, resume_text: str) -> dict:
     """Same flow as handle_resume_upload but for pasted plain text (no PDF extraction step)."""
     cleaned_text = normalize_whitespace(resume_text)

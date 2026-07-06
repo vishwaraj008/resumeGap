@@ -155,6 +155,35 @@ def handle_analyze(db: Session, user_id: int, resume_id: int, target_role: str) 
     return result
 
 
+def handle_search_roles(query: str = "", limit: int = 20) -> dict:
+    """Read-only lookup: returns distinct job-role titles from job_metadata,
+    filtered by a case-insensitive substring `query`. Powers the frontend's
+    type-ahead target-role picker so no role list is ever hardcoded client-side.
+
+    Substring matches that START with the query are ranked before mid-string
+    matches, so typing 'data' surfaces 'Data Analyst' before 'Big Data Engineer'.
+    """
+    artifacts = get_artifacts()
+    job_metadata = artifacts["job_metadata"]
+
+    # distinct, non-empty titles
+    titles = {
+        (job.get("Title") or "").strip()
+        for job in job_metadata
+    }
+    titles.discard("")
+
+    q = (query or "").strip().lower()
+    if q:
+        matches = [t for t in titles if q in t.lower()]
+        matches.sort(key=lambda t: (not t.lower().startswith(q), t.lower()))
+    else:
+        matches = sorted(titles, key=str.lower)
+
+    limit = max(1, min(limit, 50))
+    return {"roles": matches[:limit], "total_available": len(titles)}
+
+
 def handle_compare(db: Session, user_id: int, resume_id: int, target_roles: list) -> dict:
     """Multi-role comparison: runs analyze for 2-3 roles side by side."""
     if len(target_roles) < 2 or len(target_roles) > 3:

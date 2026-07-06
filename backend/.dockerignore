@@ -1,0 +1,28 @@
+# Secrets / config — provided at runtime via env_file, must NOT be baked into the image
+.env
+.env.example
+
+# Python caches / bytecode
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Local virtualenvs (if any)
+venv/
+.venv/
+env/
+
+# Tests — not needed to run the service
+tests/
+
+# Test/scratch artifacts
+myResume.pdf
+test.py
+
+# OS / tooling noise
+.DS_Store
+*.log
+.gitignore
+
+# NOTE: ml_artifacts/ is intentionally NOT ignored — the backend loads it at startup.
