@@ -40,10 +40,13 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Skill-Gap Career Path Recommender API", lifespan=lifespan)
 
+import os
+
 # CORS — allows the React frontend (different origin/container) to call this API
+frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # tighten this to your actual frontend URL before final submission
+    allow_origins=[frontend_url],  # tighten this to your actual frontend URL before final submission
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
