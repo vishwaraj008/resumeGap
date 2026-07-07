@@ -244,7 +244,7 @@ def compute_skill_gap_clean(
 
     where weight() is the TF-IDF IDF importance (see compute_skill_weights).
     This replaces the previous raw cosine-similarity score, which produced
-    misleadingly low percentages (18–25%) even when only 1–2 skills were
+    misleadingly low percentages (18-25%) even when only 1-2 skills were
     missing — cosine similarity is length-normalized and IDF-weighted in
     vector space, so it never behaves like a coverage ratio. The cosine
     match_score is still used upstream to RANK jobs; only the user-facing
