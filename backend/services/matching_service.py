@@ -14,6 +14,8 @@ Two responsibilities, kept separate on purpose:
      skill" reads as ~90%+ instead of a misleading low cosine score. It also
      returns a per-skill importance breakdown.
 """
+import difflib
+
 from sklearn.metrics.pairwise import cosine_similarity
 
 from utils.model_loader import get_artifacts
@@ -107,11 +109,95 @@ def match_skills_to_jobs_deduped(
     best_per_title = {}
     for c in candidates:
         title = c["job_title"]
+        # Skip blank/whitespace titles — a stray empty-title record in the
+        # dataset must never surface as a match or a suggestion.
+        if not title or not title.strip():
+            continue
         if title not in best_per_title or c["match_score"] > best_per_title[title]["match_score"]:
             best_per_title[title] = c
 
     deduped = sorted(best_per_title.values(), key=lambda x: x["match_score"], reverse=True)
     return deduped[:top_n]
+
+
+def find_best_job_for_role(
+    final_skills: list,
+    job_vectors,
+    job_metadata: list,
+    vectorizer,
+    target_role: str,
+    title_col: str = "Title",
+    skills_col: str = "Skills",
+    id_col: str = "JobID",
+) -> dict | None:
+    """
+    Finds the best-scoring posting whose title matches `target_role`
+    (case-insensitive) across the ENTIRE job database — independent of the
+    resume's overall similarity ranking.
+
+    This decouples "does this role exist?" from "is this role among the
+    resume's top matches?". A role that exists but scores poorly against the
+    resume is a valid, useful result (a low match %), not a "not found" error.
+
+    Returns the match dict (same shape as match_skills_to_jobs) for the
+    highest-scoring posting under that title, or None if no posting in the
+    database has that title.
+    """
+    if not final_skills:
+        raise ValueError("final_skills is empty — nothing to match against jobs")
+
+    if job_vectors.shape[0] != len(job_metadata):
+        raise RuntimeError(
+            f"job_vectors has {job_vectors.shape[0]} rows but job_metadata has "
+            f"{len(job_metadata)} entries — these artifacts must be regenerated together"
+        )
+
+    target = target_role.strip().lower()
+    if not target:
+        return None
+
+    user_vector = vectorizer.transform([" ".join(final_skills)])
+    similarities = cosine_similarity(user_vector, job_vectors)[0]
+
+    best = None
+    for idx, job in enumerate(job_metadata):
+        title = (job[title_col] or "").strip()
+        if title.lower() != target:
+            continue
+        score = float(similarities[idx])
+        if best is None or score > best["match_score"]:
+            best = {
+                "job_id": job[id_col],
+                "job_title": title,
+                "job_skills_raw": job[skills_col],
+                "match_score": score,
+            }
+    return best
+
+
+def suggest_similar_roles(
+    target_role: str,
+    job_metadata: list,
+    title_col: str = "Title",
+    limit: int = 5,
+) -> list:
+    """
+    Returns up to `limit` real role titles from the database that are closest
+    (by string similarity) to `target_role`, for the genuine "role doesn't
+    exist" case. Empty titles are excluded so junk records never appear.
+    """
+    titles = sorted({
+        (job.get(title_col) or "").strip()
+        for job in job_metadata
+    } - {""})
+
+    close = difflib.get_close_matches(target_role, titles, n=limit, cutoff=0.4)
+    if close:
+        return close
+    # Fall back to substring matches (e.g. "analyst" → "Data Analyst") so the
+    # user still gets useful pointers when nothing is fuzzy-close.
+    q = target_role.strip().lower()
+    return [t for t in titles if q and q in t.lower()][:limit]
 
 
 def compute_skill_weights(skills, vectorizer) -> dict:

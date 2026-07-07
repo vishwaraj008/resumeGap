@@ -13,7 +13,12 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
 
 from utils.model_loader import get_artifacts
-from services.matching_service import match_skills_to_jobs_deduped, compute_skill_gap_clean
+from services.matching_service import (
+    match_skills_to_jobs_deduped,
+    compute_skill_gap_clean,
+    find_best_job_for_role,
+    suggest_similar_roles,
+)
 from models.resume_model import Resume
 from models.match_result_model import MatchResult
 from config.redis_config import redis_client, is_redis_available
@@ -74,6 +79,27 @@ def _run_analysis(final_skills: list, target_role: str):
     Returns the best-matching job entry for that role plus skill gap details."""
     artifacts = get_artifacts()
 
+    # Look up the target role against the ENTIRE job database, not just the
+    # resume's top matches. A role that exists but scores low against this
+    # resume is a valid result (low match %), not a "not found" error.
+    target_match = find_best_job_for_role(
+        final_skills=final_skills,
+        job_vectors=artifacts["job_vectors"],
+        job_metadata=artifacts["job_metadata"],
+        vectorizer=artifacts["tfidf_vectorizer"],
+        target_role=target_role,
+    )
+
+    # Only a role that genuinely isn't in the database reaches here.
+    if not target_match:
+        suggestions = suggest_similar_roles(target_role, artifacts["job_metadata"])
+        raise ValueError(
+            f"Role '{target_role}' not found in the job database. "
+            f"Did you mean: {suggestions}"
+        )
+
+    # Deduped top matches — used only to surface better-fitting alternate roles
+    # when the target match is weak.
     all_matches = match_skills_to_jobs_deduped(
         final_skills=final_skills,
         job_vectors=artifacts["job_vectors"],
@@ -81,21 +107,6 @@ def _run_analysis(final_skills: list, target_role: str):
         vectorizer=artifacts["tfidf_vectorizer"],
         top_n=20,
     )
-
-    # find the target role in matches (case-insensitive)
-    target_lower = target_role.lower().strip()
-    target_match = None
-    for m in all_matches:
-        if m["job_title"].lower().strip() == target_lower:
-            target_match = m
-            break
-
-    # if the exact role isn't in top 20, the dataset probably doesn't have it
-    if not target_match:
-        raise ValueError(
-            f"Role '{target_role}' not found in the job database. "
-            f"Available top matches: {[m['job_title'] for m in all_matches[:5]]}"
-        )
 
     gap = compute_skill_gap_clean(
         final_skills=final_skills,
