@@ -92,6 +92,7 @@ def _run_analysis(final_skills: list, target_role: str):
         job_skills_raw=target_match["job_skills_raw"],
         match_score=target_match["match_score"],
         master_skills_vocab=artifacts["master_skills_vocab"],
+        vectorizer=artifacts["tfidf_vectorizer"],
     )
 
     return target_match, gap, all_matches
@@ -118,6 +119,7 @@ def handle_analyze(db: Session, user_id: int, resume_id: int, target_role: str) 
                     job_skills_raw=m["job_skills_raw"],
                     match_score=m["match_score"],
                     master_skills_vocab=get_artifacts()["master_skills_vocab"],
+                    vectorizer=get_artifacts()["tfidf_vectorizer"],
                 )
                 alternate_suggestions.append({
                     "role": m["job_title"],
@@ -148,6 +150,7 @@ def handle_analyze(db: Session, user_id: int, resume_id: int, target_role: str) 
         "match_percent": gap["match_percent"],
         "matched_skills": gap["matched_skills"],
         "missing_skills": gap["missing_skills"],
+        "skill_importance": gap["skill_importance"],
         "alternate_suggestions": alternate_suggestions,
     }
 
@@ -216,6 +219,7 @@ def handle_compare(db: Session, user_id: int, resume_id: int, target_roles: list
                 "match_percent": gap["match_percent"],
                 "matched_skills": gap["matched_skills"],
                 "missing_skills": gap["missing_skills"],
+                "skill_importance": gap["skill_importance"],
             })
         except ValueError as e:
             comparisons.append({

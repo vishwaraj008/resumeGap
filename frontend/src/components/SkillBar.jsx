@@ -1,9 +1,11 @@
-import { statusColor, titleCase } from "../lib/format";
+import { titleCase } from "../lib/format";
 
-// A single skill row: name, weighted match bar, and a have/missing tag.
-// `strength` 0-100 drives both the bar fill and its color.
+// A single skill row: name, an importance-weighted bar, and a have/missing tag.
+// `strength` 0-100 drives the bar WIDTH (how important this skill is to the
+// role, relative to the heaviest one); the color reflects have (green) vs.
+// missing (red), so a long red bar reads as "important skill you're missing".
 export default function SkillBar({ name, strength, have, importance }) {
-  const color = statusColor(strength);
+  const barColor = have ? "bg-success" : "bg-danger";
   return (
     <div>
       <div className="mb-1.5 flex items-center justify-between">
@@ -16,7 +18,7 @@ export default function SkillBar({ name, strength, have, importance }) {
       </div>
       <div className="h-2 w-full overflow-hidden rounded-full bg-surface-dim">
         <div
-          className={`h-full rounded-full ${color.bg} transition-all duration-700`}
+          className={`h-full rounded-full ${barColor} transition-all duration-700`}
           style={{ width: `${Math.max(4, Math.min(100, strength))}%` }}
         />
       </div>

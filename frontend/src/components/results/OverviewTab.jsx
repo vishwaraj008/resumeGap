@@ -7,12 +7,27 @@ export default function OverviewTab({ analysis, onOpenReport, onPickAlternate })
   const missing = analysis.missing_skills || [];
   const totalKey = matched.length + missing.length;
   const alternates = analysis.alternate_suggestions || [];
+  const importance = analysis.skill_importance || [];
 
-  // Real data only: matched skills render as full-strength "have", missing as low "missing".
-  const rows = [
-    ...matched.map((s) => ({ name: s, strength: 100, have: true })),
-    ...missing.map((s) => ({ name: s, strength: 12, have: false })),
-  ];
+  // Prefer the backend's importance-weighted breakdown: bar WIDTH encodes how
+  // much each skill matters to the role (relative to the heaviest one), color
+  // encodes have/missing. Fall back to a flat have/missing view when a
+  // reconstructed analysis (e.g. opened from History) has no weights.
+  let rows;
+  if (importance.length) {
+    const maxImp = Math.max(...importance.map((x) => x.importance_pct), 1);
+    rows = importance.map((x) => ({
+      name: x.skill,
+      strength: Math.round((x.importance_pct / maxImp) * 100),
+      have: x.matched,
+      importance: `${x.importance_pct}% of role weight`,
+    }));
+  } else {
+    rows = [
+      ...matched.map((s) => ({ name: s, strength: 100, have: true })),
+      ...missing.map((s) => ({ name: s, strength: 12, have: false })),
+    ];
+  }
 
   return (
     <div className="space-y-8">
