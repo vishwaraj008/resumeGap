@@ -1,3 +1,11 @@
+"""
+Text normalization helpers used across resume parsing and skill matching.
+
+Small, pure functions that keep skill strings comparable to the trained
+vocabulary: whitespace collapsing, lowercase/trim normalization, and splitting
+compound spans (e.g. NER returning 'C, C++, Java' as one span) into individual
+skills.
+"""
 import re
 
 

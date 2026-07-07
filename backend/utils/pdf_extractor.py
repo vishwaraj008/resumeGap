@@ -1,3 +1,11 @@
+"""
+PDF text extraction (PyMuPDF / fitz).
+
+`extract_text_from_pdf` turns validated upload bytes into plain text for the skill
+extractor. Raises ValueError on unreadable files or scanned/image-only PDFs that
+yield no selectable text, so the caller can return a clear 400 instead of feeding
+empty text downstream.
+"""
 import fitz  # PyMuPDF
 
 

@@ -1,3 +1,15 @@
+"""
+Skill extraction service — hybrid NER + keyword matching.
+
+`extract_skills_from_resume` runs two extractors over resume text and merges them:
+  * the trained spaCy NER model (finds skill spans, incl. novel phrasings), and
+  * exact keyword matching against the master skill vocabulary (high precision).
+
+The union becomes `final_skills` (what the matching engine consumes); the
+per-source breakdown (both / NER-only / keyword-only) is retained for
+transparency and debugging. Model artifacts are pulled from the in-memory cache
+loaded at startup.
+"""
 import re
 from utils.model_loader import get_artifacts
 from utils.text_cleaning import normalize_skill_text, split_compound_skill

@@ -1,3 +1,17 @@
+"""
+One-time loader for every ML artifact the app depends on.
+
+`load_all_artifacts()` runs once at startup (from main.py's lifespan) and reads
+the trained models and data files out of `ml_artifacts/`:
+  * skill NER model (spaCy)          — extracts skills from resume text,
+  * TF-IDF vectorizer + job vectors  — the role-matching engine,
+  * job metadata + master skill vocab,
+  * course catalog / skill-course index / free resources — roadmap recommendations.
+
+It fails loudly (RuntimeError) if anything is missing or corrupt — better to
+crash at boot than mid-request. Services then call `get_artifacts()` to reuse the
+already-loaded, in-memory objects instead of touching disk again.
+"""
 import json
 import joblib
 import spacy

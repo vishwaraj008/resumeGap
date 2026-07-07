@@ -1,3 +1,11 @@
+"""
+Report controller — builds the downloadable PDF report.
+
+Gathers everything about one match result (skill gap, matched/missing skills,
+learning roadmap, career trajectory), reusing persisted data where available and
+regenerating the roadmap if it hasn't been saved yet, then hands it to the PDF
+service and returns the raw PDF bytes for the route to stream back.
+"""
 import json
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError

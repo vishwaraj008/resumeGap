@@ -1,8 +1,15 @@
+"""SQLAlchemy ORM model for the `roadmaps` table."""
 from sqlalchemy import Column, Integer, String, ForeignKey, JSON
 from config.db_config import Base
 
 
 class Roadmap(Base):
+    """One learning-roadmap step for a single missing skill.
+
+    Rows belong to a MatchResult (FK, cascade-deleted with it). Each row pairs a
+    `skill` with `course_recommendations` (JSON), an `estimated_duration`, and a
+    `sequence_order` that reflects prerequisite ordering across the roadmap.
+    """
     __tablename__ = "roadmaps"
 
     id = Column(Integer, primary_key=True, index=True)

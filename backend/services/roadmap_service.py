@@ -1,3 +1,16 @@
+"""
+Roadmap service — turns a skill gap into an ordered learning plan.
+
+For a match result's missing skills, this:
+  * orders them by prerequisite dependencies (`_compute_sequence_order`, driven by
+    the PREREQUISITE_MAP), so foundational skills come first;
+  * looks up learning resources (paid catalog + free resources), filtered by
+    `resource_type`, with results cached in Redis;
+  * estimates study time per skill (`_parse_duration_to_hours`); and
+  * builds a career-trajectory graph positioned by the current match %.
+
+Redis is used only as a best-effort cache; lookups still work when it is down.
+"""
 import json
 import re
 from utils.model_loader import get_artifacts
@@ -93,6 +106,7 @@ def _compute_sequence_order(missing_skills: list) -> list:
     missing_lower = {s.lower() for s in missing_skills}
 
     def dependency_weight(skill):
+        """Sort key: number of this skill's prerequisites that are also missing."""
         prereqs = PREREQUISITE_MAP.get(skill.lower(), [])
         # count how many prereqs are also missing (need to be learned first)
         return sum(1 for p in prereqs if p in missing_lower)

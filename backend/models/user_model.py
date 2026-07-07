@@ -1,8 +1,11 @@
+"""SQLAlchemy ORM model for the `users` table."""
 from sqlalchemy import Column, Integer, String, TIMESTAMP, func
 from config.db_config import Base
 
 
 class User(Base):
+    """A registered account. `email` is unique; `password_hash` stores a bcrypt
+    hash (never plaintext). One user owns many resumes (see Resume.user_id)."""
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)

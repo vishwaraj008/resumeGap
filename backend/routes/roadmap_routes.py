@@ -1,3 +1,10 @@
+"""
+Roadmap route — `GET /roadmap/{match_result_id}`.
+
+Protected. Returns the ordered learning roadmap and career trajectory for a match
+result. The `resource_type` query param (`all` | `free` | `paid`) filters which
+learning resources are included.
+"""
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 
@@ -16,6 +23,7 @@ def get_roadmap(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    """Returns the roadmap + trajectory for a match result, filtered by resource_type."""
     try:
         return handle_get_roadmap(db, current_user.id, match_result_id, resource_type)
     except ValueError as e:

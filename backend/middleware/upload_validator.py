@@ -1,3 +1,11 @@
+"""
+Resume upload validation.
+
+`validate_resume_upload` guards the resume-upload endpoints: it enforces PDF
+content-type and a 5 MB size ceiling, rejects empty files, and returns the raw
+bytes for downstream text extraction. Enforced here (before any parsing) so
+malformed or oversized uploads are cheap to reject.
+"""
 from fastapi import UploadFile, HTTPException, status
 
 ALLOWED_CONTENT_TYPES = {"application/pdf"}

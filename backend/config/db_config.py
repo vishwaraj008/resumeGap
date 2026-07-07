@@ -1,3 +1,12 @@
+"""
+Database configuration and SQLAlchemy session factory.
+
+Builds the MySQL connection URL from environment variables (DB_HOST, DB_PORT,
+DB_NAME, DB_USER, DB_PASSWORD — host/port default to the Docker service names),
+creates a pooled engine with `pool_pre_ping` to survive dropped connections, and
+exposes `get_db()`, the FastAPI dependency that yields a session per request and
+guarantees it is closed.
+"""
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker

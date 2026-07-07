@@ -1,3 +1,19 @@
+"""
+Matching service — the resume-vs-role scoring engine.
+
+Two responsibilities, kept separate on purpose:
+
+  1. Ranking (`match_skills_to_jobs` / `_deduped`): vectorizes the user's skills
+     with the fitted TF-IDF vectorizer and ranks every job by cosine similarity.
+     Cosine is a good *ordering* signal but a poor user-facing percentage.
+
+  2. Scoring the gap (`compute_skill_gap_clean`): reports an importance-weighted
+     skill-coverage percentage — Σ weight(matched required skills) / Σ weight(all
+     required skills) — where each skill's weight is its mean TF-IDF IDF
+     (`compute_skill_weights`). This is what the UI shows, so "missing 1 minor
+     skill" reads as ~90%+ instead of a misleading low cosine score. It also
+     returns a per-skill importance breakdown.
+"""
 from sklearn.metrics.pairwise import cosine_similarity
 
 from utils.model_loader import get_artifacts

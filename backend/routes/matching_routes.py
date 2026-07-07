@@ -1,3 +1,13 @@
+"""
+Matching routes — role search, single-role analysis, and multi-role comparison.
+
+All protected:
+  * GET  /matching/roles    — type-ahead role titles from the job dataset.
+  * POST /matching/analyze  — analyze one resume against one target role.
+  * POST /matching/compare  — analyze one resume against 2-3 roles side by side.
+
+Validation/business errors surface as 400; artifact/server failures as 500.
+"""
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -24,11 +34,13 @@ def search_roles(
 
 
 class AnalyzeRequest(BaseModel):
+    """Analyze one resume against a single target role."""
     resume_id: int
     target_role: str
 
 
 class CompareRequest(BaseModel):
+    """Compare one resume against several target roles (controller enforces 2-3)."""
     resume_id: int
     target_roles: list[str]
 
@@ -39,6 +51,7 @@ def analyze_match(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    """Returns match %, matched/missing skills, per-skill importance, and alternate roles."""
     try:
         return handle_analyze(db, current_user.id, payload.resume_id, payload.target_role)
     except ValueError as e:
@@ -53,6 +66,7 @@ def compare_roles(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    """Runs analysis for 2-3 roles and returns their results side by side."""
     try:
         return handle_compare(db, current_user.id, payload.resume_id, payload.target_roles)
     except ValueError as e:

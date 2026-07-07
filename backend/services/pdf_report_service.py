@@ -1,3 +1,11 @@
+"""
+PDF report service — renders the skill-gap report.
+
+`generate_pdf_report` fills the Jinja2 HTML template in `templates/` with the
+analysis data (match %, matched/missing skills, roadmap, trajectory) and converts
+it to PDF bytes via WeasyPrint. Autoescaping is on so resume-derived text can't
+break the template markup.
+"""
 from datetime import datetime
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound

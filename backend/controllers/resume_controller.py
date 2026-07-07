@@ -1,3 +1,11 @@
+"""
+Resume controller — drives the upload → parse → extract → store pipeline.
+
+Takes validated PDF bytes (or pasted text), extracts and cleans the text, runs
+hybrid skill extraction, persists the resume and its extracted skills, and
+returns the final skill list. The raw extraction breakdown is stored but kept out
+of the response.
+"""
 import json
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError

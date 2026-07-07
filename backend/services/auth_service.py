@@ -1,3 +1,12 @@
+"""
+Auth service — user registration, login, and JWT handling.
+
+Owns all auth business logic: creating users with hashed passwords, verifying
+credentials, and minting/decoding HS256 JSON Web Tokens. The signing key is
+resolved by `_resolve_jwt_secret()` — it prefers the `JWT_SECRET_KEY` env var and
+otherwise auto-generates and persists a strong random key, so no secret ever
+needs to be committed to the repo.
+"""
 import os
 import secrets
 from pathlib import Path

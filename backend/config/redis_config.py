@@ -1,3 +1,12 @@
+"""
+Redis client configuration for the analysis cache.
+
+Exposes a shared `redis_client` (host/port from REDIS_HOST/REDIS_PORT, defaulting
+to the Docker service name) and `is_redis_available()`, a non-raising connectivity
+probe. Redis is used as a best-effort cache for match analyses; callers fall back
+to recomputing/DB access when it is unavailable, so Redis is never a hard
+dependency.
+"""
 import os
 import redis
 from dotenv import load_dotenv

@@ -1,3 +1,9 @@
+"""
+Report route — `POST /report/generate`.
+
+Protected. Builds a PDF skill-gap report for a given match result and streams it
+back as a downloadable `application/pdf` attachment.
+"""
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.responses import Response
 from pydantic import BaseModel
@@ -12,6 +18,7 @@ router = APIRouter()
 
 
 class ReportRequest(BaseModel):
+    """Request body: the match result to render into a PDF report."""
     match_result_id: int
 
 

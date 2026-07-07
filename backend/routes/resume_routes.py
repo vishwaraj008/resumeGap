@@ -1,3 +1,13 @@
+"""
+Resume routes — skill search and resume ingestion.
+
+All protected:
+  * GET  /resume/skills      — type-ahead over the master skill vocabulary.
+  * POST /resume/upload      — upload a PDF resume (validated), extract & store skills.
+  * POST /resume/upload-text — same, but from pasted resume text.
+
+Extraction/parse failures surface as 422; server failures as 500.
+"""
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Query, status
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -12,6 +22,7 @@ router = APIRouter()
 
 
 class TextUploadRequest(BaseModel):
+    """Request body for pasted-text resume ingestion."""
     resume_text: str
 
 

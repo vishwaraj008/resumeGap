@@ -1,3 +1,11 @@
+"""
+Roadmap controller — turns a match result's skill gap into a learning plan.
+
+Loads a stored match result (verifying ownership), asks the roadmap service to
+build the ordered, resource-filtered roadmap for its missing skills, persists the
+roadmap steps, and returns the full response (roadmap + career trajectory).
+`resource_type` selects paid / free / all learning resources.
+"""
 import json
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError

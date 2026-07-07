@@ -1,3 +1,13 @@
+"""
+Matching controller — resume-vs-role analysis and comparison.
+
+Loads a resume's extracted skills, runs TF-IDF job matching, and computes the
+importance-weighted skill gap for one target role (`handle_analyze`) or several
+side by side (`handle_compare`). Also powers the role type-ahead
+(`handle_search_roles`). Results are cached in Redis (keyed by resume + role) and
+persisted as MatchResult rows; when a match is weak it surfaces better-fitting
+alternate roles.
+"""
 import json
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError

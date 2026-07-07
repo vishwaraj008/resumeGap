@@ -1,3 +1,16 @@
+"""
+FastAPI application entrypoint for the Skill-Gap Career Path Recommender.
+
+Wires the whole backend together:
+  * loads environment (.env) before anything else imports config,
+  * on startup (`lifespan`) loads every ML artifact into memory once and checks
+    Redis reachability — failing loudly if a required artifact is missing,
+  * mounts CORS for the React frontend,
+  * registers the six feature routers (auth, resume, matching, roadmap, history,
+    report) and the global error handlers.
+
+Run with: `uvicorn main:app --host 0.0.0.0 --port 8000`.
+"""
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 load_dotenv()

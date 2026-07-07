@@ -1,3 +1,11 @@
+"""
+Authentication middleware — the `get_current_user` FastAPI dependency.
+
+Protected routes declare `Depends(get_current_user)`; it extracts the Bearer
+token, verifies the JWT via the auth service, loads the matching user row, and
+returns it. Any failure (bad/expired token, unknown user, DB error) is turned
+into the appropriate HTTP 401/500 so route handlers can assume a valid user.
+"""
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.orm import Session

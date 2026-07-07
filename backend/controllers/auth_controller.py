@@ -1,3 +1,11 @@
+"""
+Auth controller — orchestrates registration and login.
+
+Thin layer between the auth routes and the auth service: calls the service to
+create/authenticate a user, mints an access token, and shapes the
+`{access_token, token_type}` response. Business logic and validation live in the
+service; this just coordinates.
+"""
 from sqlalchemy.orm import Session
 
 from services.auth_service import register_new_user, authenticate_user, create_access_token

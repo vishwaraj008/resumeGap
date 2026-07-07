@@ -1,3 +1,9 @@
+"""
+History route — `GET /history/`.
+
+Protected. Returns the authenticated user's past resumes and match results,
+newest first, for the History page.
+"""
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
@@ -14,6 +20,7 @@ def get_history(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user),
 ):
+    """Returns the current user's resumes and their match results, newest first."""
     try:
         return handle_get_history(db, current_user.id)
     except ValueError as e:

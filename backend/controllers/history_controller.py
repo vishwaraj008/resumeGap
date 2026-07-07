@@ -1,3 +1,10 @@
+"""
+History controller — assembles a user's past activity.
+
+Reads the user's resumes and their associated match results (newest first) and
+shapes them into the history payload rendered by the frontend History page.
+Read-only; no external services involved.
+"""
 import json
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import SQLAlchemyError
