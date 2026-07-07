@@ -17,6 +17,7 @@ The whole stack — FastAPI + MySQL + Redis backend, React + Vite + nginx fronte
 - [Tech stack](#tech-stack)
 - [Project structure](#project-structure)
 - [How analysis works](#how-analysis-works)
+- [Data preparation](#data-preparation)
 - [Data model](#data-model)
 - [API reference](#api-reference)
 - [Configuration](#configuration)
@@ -216,6 +217,16 @@ Loaded once at startup by `utils/model_loader.py`:
 
 If any required artifact is missing or corrupt, the app **fails loudly at
 startup** rather than mid-request.
+
+---
+
+## Data preparation
+
+Every ML artifact in `backend/ml_artifacts/` is produced **offline** by five Colab
+notebooks in The full pipeline (datasets, cleaning/feature-engineering steps, tools used, the NER
+label-selection and base-model choice, the proficiency-normalization and dedup logic,
+the soft-skill dataset swap, and the YouTube + Gemini enrichment with its view-count
+fallback) is documented in **[docs/data-preparation.md](docs/data-preparation.md)**.
 
 ---
 
