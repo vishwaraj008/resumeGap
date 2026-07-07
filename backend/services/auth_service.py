@@ -1,4 +1,6 @@
 import os
+import secrets
+from pathlib import Path
 from datetime import datetime, timedelta
 from jose import jwt, JWTError, ExpiredSignatureError
 from sqlalchemy.orm import Session
@@ -7,9 +9,48 @@ from sqlalchemy.exc import SQLAlchemyError
 from models.user_model import User
 from utils.password_hashing import hash_password, verify_password
 
-JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
-if not JWT_SECRET_KEY:
-    raise RuntimeError("JWT_SECRET_KEY is not set — check your .env file")
+
+def _resolve_jwt_secret() -> str:
+    """Resolves the JWT signing key without ever shipping a usable secret in the repo.
+
+    Precedence:
+      1. JWT_SECRET_KEY env var — set this (via .env) for production or when
+         running multiple backend instances that must share one key.
+      2. A persisted, auto-generated secret — so a fresh clone runs with zero
+         config. Generated once with cryptographic randomness and written to
+         JWT_SECRET_FILE (kept on a Docker volume), so issued tokens survive
+         container restarts. Only regenerates if that file is lost.
+
+    Raises RuntimeError only if no key is set AND the secret store isn't
+    writable — in that case set JWT_SECRET_KEY explicitly.
+    """
+    env_secret = os.getenv("JWT_SECRET_KEY")
+    if env_secret:
+        return env_secret
+
+    secret_file = Path(os.getenv("JWT_SECRET_FILE", "/app/.secrets/jwt_secret"))
+    try:
+        if secret_file.exists():
+            existing = secret_file.read_text().strip()
+            if existing:
+                return existing
+
+        secret_file.parent.mkdir(parents=True, exist_ok=True)
+        generated = secrets.token_urlsafe(64)
+        secret_file.write_text(generated)
+        try:
+            secret_file.chmod(0o600)
+        except OSError:
+            pass  # best-effort; some volume backends don't support chmod
+        return generated
+    except OSError as e:
+        raise RuntimeError(
+            f"JWT_SECRET_KEY is not set and the auto-generated secret store at "
+            f"'{secret_file}' is not writable ({e}). Set JWT_SECRET_KEY in your environment."
+        )
+
+
+JWT_SECRET_KEY = _resolve_jwt_secret()
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRY_HOURS = int(os.getenv("JWT_EXPIRY_HOURS", 24))
 

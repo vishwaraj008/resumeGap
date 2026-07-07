@@ -1,15 +1,21 @@
 
 
+# Fresh-clone friendly: every variable below has a built-in default via the
+# ${VAR:-default} syntax, so `docker compose up -d --build` works with no setup.
+# To override for a real deployment, create a root .env (see .env.example) — those
+# values win over the defaults here. Keep the DB_* defaults consistent between the
+# mysql service and the backend so they always agree on credentials.
+
 services:
   mysql:
     image: mysql:8.0
     container_name: skillgap_mysql
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${DB_NAME}
-      MYSQL_USER: ${DB_USER}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-skillgap_root_pass}
+      MYSQL_DATABASE: ${DB_NAME:-skillgap_db}
+      MYSQL_USER: ${DB_USER:-skillgap_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-skillgap_pass}
     ports:
       - "3307:3306"
     volumes:
@@ -18,7 +24,7 @@ services:
     networks:
       - skillgap_network
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-skillgap_root_pass}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -43,10 +49,28 @@ services:
       dockerfile: Dockerfile
     container_name: skillgap_backend
     restart: unless-stopped
-    env_file:
-      - ./backend/.env
+    # Self-contained defaults so a fresh clone runs with no .env. These mirror the
+    # mysql credentials above; a root .env overrides any of them for production.
+    environment:
+      DB_HOST: mysql
+      DB_PORT: "3306"
+      DB_NAME: ${DB_NAME:-skillgap_db}
+      DB_USER: ${DB_USER:-skillgap_user}
+      DB_PASSWORD: ${DB_PASSWORD:-skillgap_pass}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      # No default secret is shipped. If JWT_SECRET_KEY is unset, the backend
+      # auto-generates a strong random key on first boot and persists it to the
+      # jwt_secret volume below (survives restarts). Set it in a root .env to
+      # pin a specific key for production / multi-instance deployments.
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-}
+      JWT_EXPIRY_HOURS: ${JWT_EXPIRY_HOURS:-24}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
     ports:
       - "8000:8000"
+    volumes:
+      # Persists the auto-generated JWT secret so tokens stay valid across restarts.
+      - jwt_secret:/app/.secrets
     depends_on:
       mysql:
         condition: service_healthy
@@ -80,3 +104,4 @@ networks:
 
 volumes:
   mysql_data:
+  jwt_secret:
