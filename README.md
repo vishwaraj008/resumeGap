@@ -8,6 +8,10 @@ report**.
 The whole stack — FastAPI + MySQL + Redis backend, React + Vite + nginx frontend
 — runs with a single Docker Compose command and no manual configuration.
 
+> See the **[Installation Guide](INSTALLATION.md)** to set up and run
+> the project on a fresh machine, and the **[User Manual](USER_MANUAL.md)** for a
+> walkthrough of using the app.
+
 ---
 
 ## Table of contents
@@ -223,10 +227,10 @@ startup** rather than mid-request.
 ## Data preparation
 
 Every ML artifact in `backend/ml_artifacts/` is produced **offline** by five Colab
-notebooks in The full pipeline (datasets, cleaning/feature-engineering steps, tools used, the NER
-label-selection and base-model choice, the proficiency-normalization and dedup logic,
-the soft-skill dataset swap, and the YouTube + Gemini enrichment with its view-count
-fallback) is documented in **[docs/data-preparation.md](docs/data-preparation.md)**.
+notebooks. The full pipeline — datasets, cleaning/feature-engineering steps, tools used,
+the NER label-selection and base-model choice, the proficiency-normalization and dedup
+logic, the soft-skill dataset swap, and the YouTube + Gemini enrichment with its
+view-count fallback — is documented in **[docs/data_preparation.md](docs/data_preparation.md)**.
 
 ---
 
